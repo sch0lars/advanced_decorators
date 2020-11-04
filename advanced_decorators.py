@@ -7,6 +7,8 @@ def decorator(*args, **kwargs):     # Takes the decorator arguments.
             print('Decorator kwargs:')
             for key, value in kwargs.items():
                 print(f'\t{key}: {value}')
+            print(f'Calling {func.__name__}: ', end='')
+            func()
         return wrapper
     return inner
 
